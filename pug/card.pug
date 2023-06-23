@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    title Slideshow 練習
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous' referrerpolicy='no-referrer')
+    meta(charset='UTF-3 col-xl-4')
+    // 響應式網站
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    // Boostrap 導入程式
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4' crossorigin='anonymous')
+    // 連結CSS
+    link(rel='stylesheet' href='./css/card.css')
+    link(rel='stylesheet' href='./css/header.css')
+    link(rel='stylesheet' href='./css/footer.css')
+    link(rel='stylesheet' href='grid.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap' rel='stylesheet')
+    style. 
+      *{
+        outline: 0px solid black
+      }
+  body
+    #app
+      // -------------------title---------------------
+      .title
+        h2 所有商品
+      .control
+        .container
+          .row
+            .info.col-3
+              .options
+                .options-title 分類
+                .options-taste
+                  | 經典抹茶
+                  a(href='#') 6
+                .options-taste
+                  | 新鮮草莓
+                  a(href='#') 4
+                .options-taste
+                  | 濃郁乳酪
+                  a(href='#') 5
+            div.row.col-9
+              .col-12.col-l-4.col-m-6(v-for=" item in productList")
+                .card
+                  .pic
+                    img(:src='item.img' :alt='item.title')
+                  .text
+                    p {{ item.title }}
+                    p NT${{ item.price }}
+              .button
+                button.page
+                  a(href='#') 1
+                button.page
+                  a(href='#') 2
+    script(src='https://unpkg.com/vue@3/dist/vue.global.js')
+    script(src='./vue.js')
